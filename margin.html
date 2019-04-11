@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>margin负值法</title>
+	<style>
+		html {
+			margin: 0;
+			height: 100%
+		}
+		.main {
+			width: 100%;
+			height: 100%;
+			float: left;
+		}
+		.main .body {
+			margin: 0 250px;
+			background-color: #ffe6b8;
+			height: 100%;
+		}
+		.left, .right {
+			float: left;
+			width: 240px;
+			height: 100%;
+		}
+		.left {
+			margin-left: -100%;
+			background-color: #378FF5;
+		}
+		.right {
+			margin-left: -240px;
+			background-color: #A9EC1A;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="main">
+			<div class="body">
+				接下来再来看中间栏如何处理。我们知道对于float元素，其会脱离文档流，其他盒子也会无视这个元素。（但其他盒子内的文本依然会为这个元素让出位置，环绕在周围。）所以此时只需在container容器内添加一个正常的p，其会无视left和right，撑满整个container，只需再加上margin为left
+			</div>
+		</div>
+		<div class="left">1</div>
+		<div class="right">2</div>
+	</div>
+</body>
+</html>

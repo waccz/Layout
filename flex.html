@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>margin负值法</title>
+	<style>
+		html {
+			margin: 0;
+			height: 100%
+		}
+		.container {
+			display: grid;
+    		grid-template-columns: 1fr 1fr 1fr;
+    		grid-template-rows: 1fr 1fr 1fr 1fr;
+    		grid-template-areas: 
+		        "葡萄 葡萄 葡萄"
+		        "龙虾 养鱼 养鱼"
+		        "龙虾 养鱼 养鱼"
+		        "西瓜 西瓜 西瓜";
+}
+		.putao { grid-area: 葡萄; }
+		.longxia { grid-area: 龙虾; }
+		.yangyu { grid-area: 养鱼; }
+		.xigua { grid-area: 西瓜; }
+	</style>
+</head>
+<body>
+	<div class="container">
+	    <div class="putao"></div>
+	    <div class="longxia"></div>
+	    <div class="yangyu"></div>
+	    <div class="xigua"></div>
+	</div>
+</body>
+</html>
